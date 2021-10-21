@@ -3,6 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { initializeApp } from 'firebase/app';
+import { getDatabase } from "firebase/database";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBS4QtZaFgiF8Aez_B5Mqs70IJaB2jcZbo",
+  authDomain: "chess-three.firebaseapp.com",
+  databaseURL: "https://chess-three-default-rtdb.firebaseio.com",
+  projectId: "chess-three",
+  storageBucket: "chess-three.appspot.com",
+  messagingSenderId: "1018144644540",
+  appId: "1:1018144644540:web:1a59994066f1e95764dfb9"
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
 ReactDOM.render(
   <React.StrictMode>
